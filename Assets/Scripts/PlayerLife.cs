@@ -16,7 +16,7 @@ public class PlayerLife : MonoBehaviour
 
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Enemy Body")) {
-             GetComponent<MeshRenderer>().enabled = false; // hide player
+            GetComponent<MeshRenderer>().enabled = false; // hide player
             GetComponent<Rigidbody>().isKinematic = true; // fix position of player
             GetComponent<PlayerMovement>().enabled = false; // disable movement of player
             Die();

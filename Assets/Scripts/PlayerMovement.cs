@@ -39,13 +39,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy Head")) {
             Destroy(collision.transform.parent.gameObject); // destroy the enemy
             Jump();
-        } else if (collision.gameObject.CompareTag("Finish Line")) {
-            FinishLevel();
-        }
-    }
-
-    void FinishLevel() {
-        Debug.Log("Level Finished");
+        } 
     }
 
     bool IsGrounded() {
